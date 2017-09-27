@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F4D262771F7B5ECE00F0ACE2 /* ViewComparison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D2626D1F7B5ECE00F0ACE2 /* ViewComparison.framework */; };
-		F4D2627C1F7B5ECE00F0ACE2 /* ViewComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2627B1F7B5ECE00F0ACE2 /* ViewComparisonTests.swift */; };
+		F4D2627C1F7B5ECE00F0ACE2 /* CompareHierarchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2627B1F7B5ECE00F0ACE2 /* CompareHierarchyTests.swift */; };
 		F4D2627E1F7B5ECE00F0ACE2 /* ViewComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D262701F7B5ECE00F0ACE2 /* ViewComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4D262881F7B5EDF00F0ACE2 /* UIView+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D262871F7B5EDF00F0ACE2 /* UIView+Compare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		F4D262701F7B5ECE00F0ACE2 /* ViewComparison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewComparison.h; sourceTree = "<group>"; };
 		F4D262711F7B5ECE00F0ACE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D262761F7B5ECE00F0ACE2 /* ViewComparisonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewComparisonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4D2627B1F7B5ECE00F0ACE2 /* ViewComparisonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComparisonTests.swift; sourceTree = "<group>"; };
+		F4D2627B1F7B5ECE00F0ACE2 /* CompareHierarchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareHierarchyTests.swift; sourceTree = "<group>"; };
 		F4D2627D1F7B5ECE00F0ACE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D262871F7B5EDF00F0ACE2 /* UIView+Compare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Compare.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				F4D262701F7B5ECE00F0ACE2 /* ViewComparison.h */,
 				F4D262711F7B5ECE00F0ACE2 /* Info.plist */,
+				F4D262871F7B5EDF00F0ACE2 /* UIView+Compare.swift */,
 			);
 			path = ViewComparison;
 			sourceTree = "<group>";
@@ -80,7 +83,7 @@
 		F4D2627A1F7B5ECE00F0ACE2 /* ViewComparisonTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4D2627B1F7B5ECE00F0ACE2 /* ViewComparisonTests.swift */,
+				F4D2627B1F7B5ECE00F0ACE2 /* CompareHierarchyTests.swift */,
 				F4D2627D1F7B5ECE00F0ACE2 /* Info.plist */,
 			);
 			path = ViewComparisonTests;
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					F4D2626C1F7B5ECE00F0ACE2 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					F4D262751F7B5ECE00F0ACE2 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D262881F7B5EDF00F0ACE2 /* UIView+Compare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D2627C1F7B5ECE00F0ACE2 /* ViewComparisonTests.swift in Sources */,
+				F4D2627C1F7B5ECE00F0ACE2 /* CompareHierarchyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 		F4D262821F7B5ECE00F0ACE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.danokhin.ViewComparison;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +362,7 @@
 		F4D262831F7B5ECE00F0ACE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +384,7 @@
 		F4D262851F7B5ECE00F0ACE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UEQ8YHF529;
 				INFOPLIST_FILE = ViewComparisonTests/Info.plist;
@@ -390,6 +399,7 @@
 		F4D262861F7B5ECE00F0ACE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UEQ8YHF529;
 				INFOPLIST_FILE = ViewComparisonTests/Info.plist;
